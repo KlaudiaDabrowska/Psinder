@@ -4,8 +4,8 @@ import { Box, Link, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useMutation } from "react-query";
-import { Error } from "@/components/common/Error";
 import { SuccessWithDog } from "@/components/common/SuccessWithDog";
+import { ErrorWithDog } from "@/components/common/ErrorWithDog";
 
 const Activate = () => {
   const router = useRouter();
@@ -49,7 +49,7 @@ const Activate = () => {
         </SuccessWithDog>
       )}
       {isError && (
-        <Error>
+        <ErrorWithDog>
           <Typography
             variant="h4"
             sx={{
@@ -64,7 +64,7 @@ const Activate = () => {
             Don`t worry, though. Please retry shortly, log in instead, or feel
             free to contact us for help.
           </Typography>
-        </Error>
+        </ErrorWithDog>
       )}
     </Box>
   );

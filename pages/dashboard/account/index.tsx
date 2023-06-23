@@ -40,7 +40,7 @@ const Account = () => {
   return (
     <DashboardTemplate>
       <Container maxWidth="md" sx={{ my: 8 }}>
-        <Paper>
+        <Paper sx={{ p: 3 }}>
           <Typography variant="h4">Your account</Typography>
           <Box>
             <List>
